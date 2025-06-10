@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  cubejs:
+    image: cubejs/cube:latest
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./cubejs-schema:/cube/conf
+    environment:
+      - CUBEJS_DB_HOST=host.docker.internal
+      - CUBEJS_DB_PORT=5432
+      - CUBEJS_DB_NAME=perodua
+      - CUBEJS_DB_USER=root
+      - CUBEJS_DB_PASS=Perodua_2024
+      - CUBEJS_DB_TYPE=postgres
+      - CUBEJS_API_SECRET=211a09e41ed6e7b2050c14e0ac11ae5a
+      - CUBEJS_DEV_MODE=true
+      - CUBEJS_DB_SSL=true
